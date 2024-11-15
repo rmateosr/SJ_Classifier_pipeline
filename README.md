@@ -31,12 +31,12 @@ The input to this script is an `.RDS` file containing three key tables, structur
 
 The script generates a tab-separated values (TSV) file as output with the sample IDs as well as the Score obtained from the classifier. Below is an example of the output format:
 
-```tsv
-Sample_ID	Score
-Sample1	-64.3326178927976
-Sample2	14.9246427665612
-Sample3	37.5658065396102
-```
+Sample_ID | Score
+--------- | -----
+Sample1   | -64.3326178927976
+Sample2   | 14.9246427665612
+Sample3   | 37.5658065396102
+
 
 The output will be saved in the output/ folder with a filename matching the input file's base name followed by \_Score.tsv. 
 
