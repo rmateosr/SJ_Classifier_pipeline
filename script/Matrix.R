@@ -95,4 +95,4 @@ Normal = startsthisProject + endsthisProject
 Altered = AlteredthisProject
 Total = Normal + Altered
 dataset = list(Altered, Total,sampleinfo)
-saveRDS(dataset, paste0("input_SRA/", file_name,  ".RDS"))
+saveRDS(dataset, paste0("input/", file_name,  ".RDS"))
