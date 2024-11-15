@@ -43,7 +43,7 @@ The output will be saved in the output/ folder with a filename matching the inpu
 ----
 ## Example
 
-To demonstrate how to use the script, you can run the following command:
+To demonstrate how to use the script, the following command can be executed:
 
 ```bash
 ./SJ_Classifier.sh example_data/SRP066737.RDS
