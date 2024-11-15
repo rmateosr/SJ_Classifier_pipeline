@@ -16,8 +16,6 @@ To run the classifier, use the following command from the directory containing t
 
 The input to this script is an `.RDS` file containing three key tables, structured as described below. These tables must adhere to the same design as those produced by the `create_rse()` function from the `recount3` R package with the parameter `type = "jxn"`, though the data itself does not need to originate from that specific function.
 
-For context, we applied the `recount3` package to obtain SJ data from the TCGA dataset. Using the `available_projects()` function, we identified projects labeled with `project_type = "tcga"`, which yielded 10,507 tumoral samples from 33 distinct cancer types. The SJ information was downloaded by setting the `type = "jxn"` parameter in the `create_rse()` function. Through this process, we extracted the following tables:
-
 1. **Sample Overview**  
    A table providing metadata about the samples, such as:
    - Cancer type or condition.
@@ -34,7 +32,6 @@ For context, we applied the `recount3` package to obtain SJ data from the TCGA d
    - **Columns**: Individual samples.
    - **Entries**: Observed counts for each SJ-sample pair.
 
-Although these tables are commonly generated using the `recount3` package, the script only requires that the input `.RDS` file contains data in this format.
 
 ----
 ## Output Format
