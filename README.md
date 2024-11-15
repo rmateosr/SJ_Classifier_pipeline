@@ -17,20 +17,13 @@ To run the classifier, use the following command from the directory containing t
 The input to this script is an `.RDS` file containing three key tables, structured as described below. These tables must adhere to the same design as those produced by the `create_rse()` function from the `recount3` R package with the parameter `type = "jxn"`, though the data itself does not need to originate from that specific function.
 
 1. **Sample Overview**  
-   A table providing metadata about the samples, such as:
-   - Cancer type or condition.
-   - Unique identifiers for each sample.
+  - An overview detailing the samples for each cancer type.
 
 2. **Splice Junction (SJ) List**  
-   A comprehensive list of splice junctions (SJs), including:
-   - **Coordinates**: Genomic positions of the junctions.
-   - **Annotation Status**: Indication of whether each junction is annotated in reference genomes.
+  -	A comprehensive list of SJ, complete with coordinates and indications of whether the junction is annotated in reference genomes.
 
 3. **SJ Count Matrix**  
-   A matrix capturing the counts of each SJ across samples, structured as follows:
-   - **Rows**: Individual splice junctions.
-   - **Columns**: Individual samples.
-   - **Entries**: Observed counts for each SJ-sample pair.
+  -	A matrix capturing the counts of each SJ, organized with junctions as rows and samples as columns..
 
 
 ----
