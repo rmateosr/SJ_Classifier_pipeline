@@ -29,7 +29,7 @@ The input to this script is an `.RDS` file containing three key tables, structur
 ----
 ## Output Format
 
-The script generates a tab-separated values (TSV) file as output with the sample IDs as well as the Score obtained from the classifier. Below is an example of the output format:
+The script generates a tab-separated values (TSV) file as output with the sample IDs as well as the score obtained from the classifier. Below is an example of the output format:
 
 Sample_ID | Score
 --------- | -----
