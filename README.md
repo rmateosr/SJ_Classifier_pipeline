@@ -21,7 +21,7 @@ The input to this script is a `.tsv` file containing multiple columns, structure
     - Example format: `chr1:1064402-1065829:+`
 
 2. **2nd Column: Annotation**
-    - A binary indicator (0 or 1) specifying whether the junction is annotated in reference genomes, as reported in datasets accessed via the `recount3` resource:
+    - A binary indicator (0 or 1) specifying whether the junction is annotated in reference genomes, similar tothe annotations reported in datasets accessed via the recount3 resource:
         - `1`: Annotated in reference genomes.
         - `0`: Not annotated in reference genomes.
 
