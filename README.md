@@ -29,6 +29,7 @@ The input to this script is a `.tsv` file containing multiple columns, structure
     - Represents a matrix capturing the counts of each splice junction (SJ).
     - Each row corresponds to a splice junction.
     - Each additional column represents the counts for a specific sample.
+    - Column headers must reflect the sample names.
 
 ### Additional Notes
 - The `.tsv` file must have a consistent structure, with tab-delimited columns
