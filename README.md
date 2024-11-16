@@ -8,23 +8,31 @@ SJ-Classifier is a splicing Junction-based classifier trained on The Cancer Geno
 ## How to use 
 To run the classifier, use the following command from the directory containing the script:
 ```bash
-./SJ_Classifier.sh /path/to/input_file.RDS
+./SJ_Classifier.sh /path/to/input_file.tsv [output_folder]
 ```
 
 ----
 ## Input Format
 
-The input to this script is an `.RDS` file containing three key tables, structured as described below. These tables must adhere to the same design as those produced by the `create_rse()` function from the `recount3` R package with the parameter `type = "jxn"`, though the data itself does not need to originate from that specific function.
+The input to this script is a `.tsv` file containing multiple columns, structured as follows:
 
-1. **Sample Overview**  
-    - An overview detailing the samples for each cancer type.
+1. **1st Column: Splice Junction (SJ)**
+    - Contains unique identifiers for each splice junction in the dataset.
+    - Example format: `chr1:1064402-1065829:+`
 
-2. **Splice Junction (SJ) List**  
-    -	A comprehensive list of SJ, complete with coordinates and indications of whether the junction is annotated in reference genomes.
+2. **2nd Column: Annotation**
+    - A binary indicator (0 or 1) specifying whether the junction is annotated in reference genomes, as reported in datasets accessed via the `recount3` resource:
+        - `1`: Annotated in reference genomes.
+        - `0`: Not annotated in reference genomes.
 
-3. **SJ Count Matrix**  
-    -	A matrix capturing the counts of each SJ, organized with junctions as rows and samples as columns..
+3. **Columns 3 and Beyond: SJ Count Matrix**
+    - Represents a matrix capturing the counts of each splice junction (SJ).
+    - Each row corresponds to a splice junction.
+    - Each additional column represents the counts for a specific sample.
 
+### Additional Notes
+- The `.tsv` file must have a consistent structure, with tab-delimited columns
+- Ensure the input file includes all required columns in the correct order to avoid errors during processing.
 
 ----
 ## Output Format
@@ -46,6 +54,5 @@ The output will be saved in the output/ folder with a filename matching the inpu
 To demonstrate how to use the script, the following command can be executed:
 
 ```bash
-./SJ_Classifier.sh example_data/SRP066737.RDS
+./SJ_Classifier.sh new/folder/SRP066737.tsv output_test
 ```
-
