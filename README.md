@@ -8,7 +8,7 @@ SJ-Classifier is a splicing Junction-based classifier trained on The Cancer Geno
 ## How to use 
 To run the classifier, use the following command from the directory containing the script:
 ```bash
-./SJ_Classifier.sh /path/to/input_file.tsv [output_folder]
+Rscript SJ_Classifier.R /path/to/input_file.tsv /path/to/output_file.tsv
 ```
 
 ----
@@ -24,7 +24,7 @@ The input to this script is a `.tsv` file containing multiple columns, structure
         - end: The genomic position of the end of the splice junction (1-based).
         - strand: Indicates the transcription strand where the splice junction occurs (+ for forward strand, - for reverse strand).
     - Example format: `chr1:12228-12612:+`
-      
+
 2. **2nd Column: Annotation**
     - A binary indicator (0 or 1) specifying whether the junction is annotated in reference genomes, similar tothe annotations reported in datasets accessed via the recount3 resource:
         - `1`: Annotated in reference genomes.
@@ -52,13 +52,11 @@ Sample2   | 14.9246427665612
 Sample3   | 37.5658065396102
 
 
-Unless a folder is specified in [output_folder], the output will be saved in the output/ folder with a filename matching the input file's base name followed by \_Score.tsv. 
-
 ----
 ## Example
 
 To demonstrate how to use the script, the following command can be executed:
 
 ```bash
-./SJ_Classifier.sh example_data/SRP066737_test.tsv output_test
+Rscript SJ_Classifier.R example_data/SRP066737_test.tsv output/SJ_Classifier_results.tsv
 ```
