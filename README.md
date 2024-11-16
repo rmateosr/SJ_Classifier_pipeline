@@ -18,7 +18,7 @@ The input to this script is a `.tsv` file containing multiple columns, structure
 
 1. **1st Column: Splice Junction (SJ)**
     - Contains unique identifiers for each splice junction in the dataset.
-    - Example format: `chr1:1064402-1065829:+`
+    - Example format: `chr1:12228-12612:+`
 
 2. **2nd Column: Annotation**
     - A binary indicator (0 or 1) specifying whether the junction is annotated in reference genomes, similar tothe annotations reported in datasets accessed via the recount3 resource:
