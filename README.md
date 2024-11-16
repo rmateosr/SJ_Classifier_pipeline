@@ -24,8 +24,7 @@ The input to this script is a `.tsv` file containing multiple columns, structure
         - end: The genomic position of the end of the splice junction (1-based).
         - strand: Indicates the transcription strand where the splice junction occurs (+ for forward strand, - for reverse strand).
     - Example format: `chr1:12228-12612:+`
-    - 
-
+      
 2. **2nd Column: Annotation**
     - A binary indicator (0 or 1) specifying whether the junction is annotated in reference genomes, similar tothe annotations reported in datasets accessed via the recount3 resource:
         - `1`: Annotated in reference genomes.
