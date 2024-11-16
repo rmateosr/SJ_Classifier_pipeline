@@ -55,5 +55,5 @@ The output will be saved in the output/ folder with a filename matching the inpu
 To demonstrate how to use the script, the following command can be executed:
 
 ```bash
-./SJ_Classifier.sh new/folder/SRP066737.tsv output_test
+./SJ_Classifier.sh example_data/SRP066737_test.tsv output_test
 ```
