@@ -18,7 +18,13 @@ The input to this script is a `.tsv` file containing multiple columns, structure
 
 1. **1st Column: Splice Junction (SJ)**
     - Contains unique identifiers for each splice junction in the dataset.
+    - Format: chromosome:start-end:strand
+        - chromosome: The chromosome where the splice junction is located (e.g., chr1, chrX).
+        - start: The genomic position of the start of the splice junction (1-based).
+        - end: The genomic position of the end of the splice junction (1-based).
+        - strand: Indicates the transcription strand where the splice junction occurs (+ for forward strand, - for reverse strand).
     - Example format: `chr1:12228-12612:+`
+    - 
 
 2. **2nd Column: Annotation**
     - A binary indicator (0 or 1) specifying whether the junction is annotated in reference genomes, similar tothe annotations reported in datasets accessed via the recount3 resource:
