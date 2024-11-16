@@ -47,7 +47,7 @@ Sample2   | 14.9246427665612
 Sample3   | 37.5658065396102
 
 
-The output will be saved in the output/ folder with a filename matching the input file's base name followed by \_Score.tsv. 
+Unless a folder is specified in [output_folder], the output will be saved in the output/ folder with a filename matching the input file's base name followed by \_Score.tsv. 
 
 ----
 ## Example
