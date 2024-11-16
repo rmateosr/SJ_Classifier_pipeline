@@ -1,16 +1,13 @@
 #!/usr/bin/Rscript
 #args is the SRA file
 args = commandArgs(trailingOnly = TRUE)
-set.seed(12)
 
 library(stringr)
-library(foreach)
-library(ggsci)
-library(data.table)
-library(dplyr)
+library(tools)
 
 samplefilefullname = args[1]
-SRAID = tools::file_path_sans_ext(basename(samplefilefullname))
+output_folder = args[2]
+SRAID =file_path_sans_ext(basename(samplefilefullname))
 
 trainedparameters <- readRDS("resources/Trained_Parameters.RDS")
 alpha = as.matrix(data.frame(trainedparameters[1]))
@@ -22,7 +19,7 @@ scorediffthreshold = 10
 c = 0.001
 
 
-SRAproject <- readRDS(paste0("input/", SRAID , ".RDS"))
+SRAproject <- readRDS(paste0("tmp/", SRAID , ".RDS"))
 dataforbetabin  = data.frame(SRAproject[[1]], check.names = F)
 totalreadsperSJPANCANCER = data.frame(SRAproject[[2]], check.names = F)
 
@@ -42,14 +39,7 @@ dataforbetabin = dataforbetabin[, whichones]
 totalreadsperSJPANCANCER = totalreadsperSJPANCANCER[, whichones]
 alpha = alpha[, whichones]
 beta = beta[, whichones]
-if (length(SRAproject)  >  2) {
-  dataforbetabin$TCGA_ID = SRAproject[[3]]$external_id
-  totalreadsperSJPANCANCER$TCGA_ID = SRAproject[[3]]$external_id
-} else {
-  dataforbetabin$TCGA_ID = SRAID[nSRA]
-  totalreadsperSJPANCANCER$TCGA_ID = SRAID[nSRA]
-  
-}
+
 
 dataforbetabin = dataforbetabin[, colnames(dataforbetabin) != "Sample_name"]
 totalreadsperSJPANCANCER = totalreadsperSJPANCANCER[, grep("chr", colnames(totalreadsperSJPANCANCER))]
@@ -138,7 +128,7 @@ finalscore = lpy[2] - lpy[1] +  rowSums(diffscoremutnotmut)
 
 if (length(SRAproject)  >  2) {
   resultadosnumericPANCANCER = data.frame(
-    Sample_ID = SRAproject[[3]]$external_id,
+    Sample_ID = SRAproject[[3]],
     Score = finalscore
   )
   
@@ -151,7 +141,7 @@ if (length(SRAproject)  >  2) {
   
 }
 
-output_file <- paste0("output/", SRAID, "_Score.tsv")
+output_file <- paste0(output_folder ,"/", SRAID, "_Score.tsv")
 
 write.table(resultadosnumericPANCANCER, output_file, sep = "\t", quote = FALSE, row.names = FALSE)
 
