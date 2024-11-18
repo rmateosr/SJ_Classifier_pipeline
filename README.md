@@ -6,7 +6,7 @@ SJ-Classifier is a splicing junction-based classifier trained on The Cancer Geno
 
 ----
 ## How to use 
-To run the classifier, use the following command from the directory containing the script:
+To run the classifier, exacute the following command from the directory containing the script:
 ```bash
 Rscript SJ_Classifier.R /path/to/input_file.tsv /path/to/output_file.tsv
 ```
