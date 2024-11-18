@@ -16,13 +16,13 @@ Rscript SJ_Classifier.R /path/to/input_file.tsv /path/to/output_file.tsv
 
 The input to this script is a `.tsv` file containing multiple columns, structured as follows:
 
-1. **1st Column: Splice Junction (SJ)**
-    - Contains unique identifiers for each splice junction in the dataset.
+1. **1st Column: Splicing Junction (SJ)**
+    - Contains unique identifiers for each splicing junction in the dataset.
     - Format: chromosome:start-end:strand
-        - chromosome: The chromosome where the splice junction is located (e.g., chr1, chrX).
-        - start: The genomic position of the start of the splice junction (1-based).
-        - end: The genomic position of the end of the splice junction (1-based).
-        - strand: Indicates the transcription strand where the splice junction occurs (+ for forward strand, - for reverse strand).
+        - chromosome: The chromosome where the splicing junction is located (e.g., chr1, chrX).
+        - start: The genomic position of the start of the splicing junction (1-based).
+        - end: The genomic position of the end of the splicing junction (1-based).
+        - strand: Indicates the transcription strand where the splicing junction occurs (+ for forward strand, - for reverse strand).
     - Example format: `chr1:12228-12612:+`
 
 2. **2nd Column: Annotation**
@@ -31,8 +31,8 @@ The input to this script is a `.tsv` file containing multiple columns, structure
         - `0`: Not annotated in reference genomes.
 
 3. **Columns 3 and Beyond: SJ Count Matrix**
-    - Represents a matrix capturing the counts of each splice junction (SJ).
-    - Each row corresponds to a splice junction.
+    - Represents a matrix capturing the counts of each splicing junction.
+    - Each row corresponds to a splicing junction.
     - Each additional column represents the counts for a specific sample.
     - Column headers must reflect the sample names.
 
