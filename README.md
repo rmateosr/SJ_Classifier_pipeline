@@ -51,7 +51,7 @@ Sample1   | -64.3326178927976
 Sample2   | 14.9246427665612
 Sample3   | 37.5658065396102
 
-Note: The score represents the classifier's confidence level, where positive scores indicate a higher likelihood of abnormal activation of the KEAP1-NRF2 pathway, and negative scores indicate a lower likelihood.
+The score represents the classifier's confidence level, where positive scores indicate a higher likelihood of abnormal constitutive activation of the KEAP1-NRF2 pathway, and negative scores indicate a lower likelihood.
 
 ----
 ## Example
