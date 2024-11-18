@@ -2,7 +2,7 @@
 **A splicing junction-based classifier for detecting abnormal constitutive activation of the KEAP1-NRF2 pathway.**
 ## Introduction 
 
-SJ-Classifier is a splicing junction-based classifier trained on The Cancer Genome Atlas datasets for detection of abnormal constitutive activation of the KEAP1-NRF2 pathway.
+SJ-Classifier is a splicing junction-based classifier trained on The Cancer Genome Atlas datasets, designed to detect abnormal constitutive activation of the KEAP1-NRF2 pathway.
 
 ----
 ## How to use 
