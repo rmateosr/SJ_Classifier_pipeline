@@ -26,7 +26,7 @@ The input to this script is a `.tsv` file containing multiple columns, structure
     - Example format: `chr1:12228-12612:+`
 
 2. **2nd Column: Annotation**
-    - A binary indicator (0 or 1) specifying whether the junction is annotated in reference genomes, similar tothe annotations reported in datasets accessed via the recount3 resource:
+    - A binary indicator (0 or 1) specifying whether the junction is annotated in reference genomes, similar to the annotations reported in datasets accessed via the recount3 resource:
         - `1`: Annotated in reference genomes.
         - `0`: Not annotated in reference genomes.
 
@@ -37,7 +37,7 @@ The input to this script is a `.tsv` file containing multiple columns, structure
     - Column headers must reflect the sample names.
 
 ### Additional Notes
-- The `.tsv` file must have a consistent structure, with tab-delimited columns
+- Input files must have a consistent structure with tab-delimited columns.
 - Ensure the input file includes all required columns in the correct order to avoid errors during processing.
 
 ----
@@ -51,6 +51,7 @@ Sample1   | -64.3326178927976
 Sample2   | 14.9246427665612
 Sample3   | 37.5658065396102
 
+Note: The score represents the classifier's confidence level, where positive scores indicate a higher likelihood of abnormal activation of the KEAP1-NRF2 pathway, and negative scores indicate a lower likelihood.
 
 ----
 ## Example
